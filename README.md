@@ -22,6 +22,19 @@ To run this application on your local system
 - Authorise 
 - Use the application 
 
+## Docker (one-command setup)
+1. Copy the environment template and adjust values as needed:
+   ```bash
+   cp .env.example .env
+   ```
+2. Build and start everything:
+   ```bash
+   docker compose up --build
+   ```
+3. Open the app:
+   - Frontend: http://localhost:3006
+   - Backend: http://localhost:5000
+
 ## Features 
 <!-- --- -->
 - There is login and logout functionality.
