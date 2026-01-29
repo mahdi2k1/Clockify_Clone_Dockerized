@@ -2,7 +2,9 @@ import axios from "axios";
 import { error, loading, register } from "./Auth.types";
 import { toast } from "react-toastify";
 
-const API_URL = `https://clcok2.onrender.com/api/users/`;
+const API_BASE_URL =
+  process.env.REACT_APP_API_URL || "https://clcok2.onrender.com/api";
+const API_URL = `${API_BASE_URL}/users/`;
 
 const toastOptions = {
   position: "bottom-left",

@@ -9,7 +9,9 @@ import {
 } from "./Task.types";
 import axios from "axios";
 
-const API_URL = `https://clcok2.onrender.com/api/goals/`;
+const API_BASE_URL =
+  process.env.REACT_APP_API_URL || "https://clcok2.onrender.com/api";
+const API_URL = `${API_BASE_URL}/goals/`;
 
 export const startTask = (payload) => (dispatch) => {
   dispatch({ type: start, payload: payload });
